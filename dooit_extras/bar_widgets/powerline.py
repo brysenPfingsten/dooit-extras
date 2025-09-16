@@ -7,7 +7,7 @@ from typing_extensions import Self
 class Powerline(TextBox):
     def __init__(
         self,
-        api: DooitAPI = DooitAPI(Dooit()),
+        api: DooitAPI,
         text: str = "",
         fmt: str = "{}",
         fg: str = "",
