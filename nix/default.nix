@@ -1,10 +1,9 @@
 {
   lib,
   fetchFromGitHub,
-  python311,
+  python3,
   dooit,
 }: let
-  python3 = python311;
   version = "0.2.1";
 in
   python3.pkgs.buildPythonPackage {
@@ -20,7 +19,7 @@ in
     };
 
     build-system = with python3.pkgs; [poetry-core];
-    buildInputs = [dooit];
+    propagatedBuildInputs = [dooit];
 
     # No tests available
     doCheck = false;
